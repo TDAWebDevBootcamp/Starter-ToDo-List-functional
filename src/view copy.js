@@ -5,12 +5,12 @@ import './App.css';
 class View extends React.Component {
   constructor(props) {
     super(props)
-    this.todos = [{ id: 1, task: "make static data", complete: false },
-    { id: 2, task: "make dynamic data", complete: false }]
+    // moved to state in app.js this.todos = [{ id: 1, task: "make static data", complete: false },
+    // { id: 2, task: "make dynamic data", complete: false }]
   }
 
   buildRows() {
-    return this.todos.map((current) => (
+    return this.props.todos.map((current) => (
       <tr key={current.id}>
         <td>
           {current.id}
