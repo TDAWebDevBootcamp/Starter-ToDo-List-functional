@@ -2,15 +2,13 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import './App.css';
 
-class View extends React.Component {
-  constructor(props) {
-    super(props)
-    this.todos = [{ id: 1, task: "make static data", complete: false },
+function View(){
+    const todos = [{ id: 1, task: "make static data", complete: false },
     { id: 2, task: "make dynamic data", complete: false }]
-  }
 
-  buildRows() {
-    return this.todos.map((current) => (
+
+  const buildRows = () =>  {
+    return todos.map((current) => (
       <tr key={current.id}>
         <td>
           {current.id}
@@ -27,7 +25,6 @@ class View extends React.Component {
   }
 
 
-  render() {
     return (
       <>
         <Table striped bordered hover>
@@ -39,12 +36,11 @@ class View extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.buildRows()}
+            {buildRows()}
           </tbody>
         </Table>
       </>
     );
-  }
 
 }
 export default View;
