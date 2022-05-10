@@ -24,13 +24,11 @@ function Add(){
             />
           </Form.Group>
 
-          <Form.Group controlId="complete">
-            <Form.Label> Completed?</Form.Label>
-            <Form.Control 
-              name="completed" 
-              type="checkbox"
-            />
-          </Form.Group>
+          <Form.Check 
+            type="checkbox"
+            id="complete"
+            label="Completed?"
+          />
 
           <Button variant="primary" type="submit">
             Submit
