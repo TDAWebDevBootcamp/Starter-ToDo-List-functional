@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import './App.css';
 
-function View(props){
+function View(){
+    const [todos, changeTodos] = useState( [{ id: 1, task: "make static data", complete: false },
+    { id: 2, task: "make dynamic data", complete: false }])
+
 
   const buildRows = () =>  {
-    return props.todos.map((current) => (
+    return todos.map((current) => (
       <tr key={current.id}>
         <td>
           {current.id}
