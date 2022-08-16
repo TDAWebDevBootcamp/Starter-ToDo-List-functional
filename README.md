@@ -5,3 +5,4 @@
 1. Run npm install
 1. Run npm start 
 
+Copyright (c) 2022 The Developer Academy Ltd
